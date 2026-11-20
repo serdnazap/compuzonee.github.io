@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompuZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>CompuZone</h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#carrito">Carrito (<span id="contador">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- VENTANA 1: INICIO -->
+    <section id="inicio" class="ventana">
+      <div class="bienvenida">
+        <h1>Bienvenido a CompuZone</h1>
+        <p>Encuentra computadoras, laptops gaming y accesorios.</p>
+        <a class="boton" href="#productos">Ver productos</a>
+      </div>
+      <h2>Categorías</h2>
+      <div class="categorias">
+        <a href="#computadoras">Computadoras</a>
+        <a href="#gaming">Gaming</a>
+        <a href="#accesorios">Accesorios</a>
+      </div>
+
+      <h2>Sobre CompuZone</h2>
+      <p class="sobre-tienda">CompuZone es una tienda en línea especializada en tecnología. Ofrecemos computadoras y laptops para estudio, trabajo y creación de contenido, equipos gaming y accesorios como teclados, mouse, audífonos y monitores, para que encuentres en un solo lugar lo que necesitas para armar tu espacio de trabajo o de juego.</p>
+    </section>
+
+    <section id="productos" class="ventana">
+      <h1>Nuestros productos</h1>
+      <p>Da clic en «Ver detalles» para conocer cada producto.</p>
+
+      <h2 id="computadoras">Computadoras</h2>
+      <div class="productos">
+        <!-- PRODUCTO: MacBook Pro M4 -->
+        <article class="producto"
+          data-nombre="MacBook Pro M4"
+          data-descripcion="La MacBook Pro con chip M4 de Apple combina un rendimiento muy alto con una gran eficiencia de batería. Es ideal para quienes editan video, programan, diseñan o simplemente quieren una laptop rápida, silenciosa y duradera para todo el día."
+          data-codigo="macbook"
+          data-precio="37999"
+          data-caracteristicas="Chip Apple M4 de alto rendimiento|Pantalla Liquid Retina XDR|Batería de larga duración|Sistema operativo macOS|Diseño de aluminio delgado y resistente|Ideal para edición, programación y diseño"
+          data-imagenes="t3.1.jpeg,t3.2.jpeg,t3.3.jpeg,t3.4.jpeg">
+          <div class="fotos">
+            <img src="t3.1.jpeg" alt="MacBook Pro M4" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>MacBook Pro M4</h3>
+          <p>Laptop Apple con chip M4.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+
+        <!-- PRODUCTO: ASUS Zenbook -->
+        <article class="producto"
+          data-nombre="ASUS Zenbook"
+          data-descripcion="La ASUS Zenbook es una laptop delgada y ligera, pensada para estudiar, trabajar y llevarla a todas partes. Ofrece buen rendimiento para tareas diarias, videollamadas y multitarea."
+          data-codigo="zenbook"
+          data-precio="24999"
+          data-caracteristicas="Diseño delgado y portátil|Buen rendimiento para estudio y oficina|Pantalla de buena calidad para trabajar cómodamente|Batería para jornadas largas|Ideal para estudiantes y profesionistas"
+          data-imagenes="t2.1.jpeg,t2.2.jpeg,t2.3.jpeg,t2.4.jpeg,t2.5.jpeg">
+          <div class="fotos">
+            <img src="t2.1.jpeg" alt="ASUS Zenbook" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>ASUS Zenbook</h3>
+          <p>Laptop ASUS para estudio y trabajo.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+      </div>
+
+      <h2 id="gaming">Gaming</h2>
+      <div class="productos">
+        <!-- PRODUCTO: Lenovo Legion 5 -->
+        <article class="producto"
+          data-nombre="Lenovo Legion 5"
+          data-descripcion="La Lenovo Legion 5 es una laptop gamer equilibrada: tiene la potencia para jugar títulos exigentes y un sistema de enfriamiento pensado para sesiones largas de juego."
+          data-codigo="legion"
+          data-precio="38990"
+          data-caracteristicas="Rendimiento gamer con gráficos dedicados|Sistema de enfriamiento para sesiones largas|Pantalla con alta tasa de refresco|Teclado cómodo para jugar y escribir|También sirve para edición y diseño"
+          data-imagenes="t1.1.jpeg,t1.2.jpeg,t1.3.jpeg,t1.4.jpeg,t1.5.jpeg,t1.6.jpeg">
+          <div class="fotos">
+            <img src="t1.1.jpeg" alt="Lenovo Legion 5" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>Lenovo Legion 5</h3>
+          <p>Laptop para videojuegos.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+
+        <!-- PRODUCTO: ASUS ROG Zephyrus G16 -->
+        <article class="producto"
+          data-nombre="ASUS ROG Zephyrus G16"
+          data-descripcion="La ASUS ROG Zephyrus G16 es una laptop gaming premium que combina potencia con un diseño delgado y elegante. Está pensada para jugadores y creadores que quieren gran rendimiento sin cargar un equipo pesado."
+          data-codigo="zephyrus"
+          data-precio="55999"
+          data-caracteristicas="Línea ROG (Republic of Gamers) de ASUS|Pantalla de 16 pulgadas|Diseño delgado y elegante|Potencia para juegos y creación de contenido|Excelente para entretenimiento multimedia"
+          data-imagenes="t8.1.jpeg,t8.2.jpeg">
+          <div class="fotos">
+            <img src="t8.1.jpeg" alt="ASUS ROG Zephyrus G16" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>ASUS ROG Zephyrus G16</h3>
+          <p>Laptop de la línea ROG para gaming.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+      </div>
+
+      <h2 id="accesorios">Accesorios</h2>
+      <div class="productos">
+        <!-- PRODUCTO: Free Wolf T96 -->
+        <article class="producto"
+          data-nombre="Free Wolf T96"
+          data-descripcion="El combo Free Wolf T96 incluye teclado y mouse inalámbricos que se conectan por Bluetooth o con receptor de 2.4 GHz, para usarlos con computadora, laptop o tablet sin cables estorbando."
+          data-codigo="freewolf"
+          data-precio="719"
+          data-caracteristicas="Conexión Bluetooth y 2.4 GHz|Teclado y mouse incluidos|Sin cables, escritorio más ordenado|Compatible con varios dispositivos|Ideal para casa, oficina y escuela"
+          data-imagenes="t6.1.jpeg,t6.2.jpeg,t6.3.jpeg,t6.4.jpeg">
+          <div class="fotos">
+            <img src="t6.1.jpeg" alt="Free Wolf T96" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>Free Wolf T96</h3>
+          <p>Teclado y mouse inalámbricos BT/2.4 GHz.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+
+        <!-- PRODUCTO: Logitech G203 LIGHTSYNC -->
+        <article class="producto"
+          data-nombre="Logitech G203 LIGHTSYNC"
+          data-descripcion="El Logitech G203 LIGHTSYNC es un mouse gamer con cable, iluminación RGB personalizable y un sensor preciso. Es cómodo, ligero y fácil de configurar."
+          data-codigo="logitech"
+          data-precio="399"
+          data-caracteristicas="Conexión por cable: sin retrasos ni baterías|Iluminación RGB LIGHTSYNC personalizable|Sensor de hasta 8,000 DPI|6 botones programables|Diseño clásico, cómodo para largas sesiones"
+          data-imagenes="t5.1.jpeg,t5.2.jpeg,t5.3.jpeg">
+          <div class="fotos">
+            <img src="t5.1.jpeg" alt="Logitech G203 LIGHTSYNC" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>Logitech G203 LIGHTSYNC</h3>
+          <p>Mouse gamer con cable.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+
+        <!-- PRODUCTO: Razer Barracuda V2 Pro -->
+        <article class="producto"
+          data-nombre="Razer Barracuda V2 Pro"
+          data-descripcion="Los Razer Barracuda V2 Pro son audífonos inalámbricos pensados para jugar con baja latencia y para usarlos todo el día. Combinan conexión 2.4 GHz y Bluetooth, cancelación activa de ruido y una batería de larga duración, con un diseño plegable y ligero."
+          data-codigo="razer"
+          data-precio="4531"
+          data-caracteristicas="Conexión HyperSpeed 2.4 GHz y Bluetooth|Cancelación activa de ruido híbrida|Hasta 70 horas de batería (50 con cancelación de ruido activa)|Diseño plegable de solo 285 g|THX Spatial Audio+ para sonido envolvente en PC|Micrófonos con cancelación de ruido para partidas y llamadas"
+          data-imagenes="t4.1.jpeg,t4.2.jpeg,t4.3.jpeg,t4.4.jpeg">
+          <div class="fotos">
+            <img src="t4.1.jpeg" alt="Razer Barracuda V2 Pro" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>Razer Barracuda V2 Pro</h3>
+          <p>Audífonos inalámbricos para gaming.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+
+        <!-- PRODUCTO: Monitor Acer de 27 pulgadas -->
+        <article class="producto"
+          data-nombre="Monitor Acer de 27 pulgadas"
+          data-descripcion="Monitor Acer de 27 pulgadas con resolución Full HD y panel IPS. Su frecuencia de 120 Hz da un movimiento fluido en juegos y videos, y los colores se ven bien desde distintos ángulos."
+          data-codigo="acer"
+          data-precio="2299"
+          data-caracteristicas="27 pulgadas, resolución Full HD|Panel IPS: buenos colores y ángulos de visión|Frecuencia de 120 Hz y respuesta de 1 ms (VRB)|Ideal para juegos, oficina y entretenimiento|Se conecta a laptops y computadoras"
+          data-imagenes="t7.1.jpeg,t7.2.jpeg,t7.3.jpeg">
+          <div class="fotos">
+            <img src="t7.1.jpeg" alt="Monitor Acer de 27 pulgadas" onerror="this.style.display='none'">
+            <span>Coloca aquí tu imagen</span>
+          </div>
+          <h3>Monitor Acer de 27 pulgadas</h3>
+          <p>Monitor FHD IPS de 120 Hz.</p>
+          <p class="precio">Precio por confirmar</p>
+          <button onclick="verDetalle(this)">Ver detalles</button>
+          <button onclick="agregar(this)">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- VENTANA 3: DETALLES -->
+    <section id="detalle" class="ventana">
+      <a href="#productos">← Volver a productos</a>
+      <h1 id="nombre-detalle">Detalles del producto</h1>
+      <div class="detalle-caja">
+        <!-- GALERÍA: foto grande + miniaturas (las llena script.js) -->
+        <div class="galeria">
+          <img id="detalle-principal" class="principal" alt="Foto principal">
+          <div id="miniaturas" class="miniaturas"></div>
+        </div>
+        <div>
+          <p id="descripcion-detalle">Selecciona un producto en el catálogo.</p>
+          <h3>Características</h3>
+          <ul id="caracteristicas-detalle" class="caracteristicas"></ul>
+          <p id="precio-detalle" class="precio">Precio por confirmar</p>
+          <button id="boton-detalle" onclick="agregarDetalle()">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTANA 4: CARRITO -->
+    <section id="carrito" class="ventana">
+      <h1>Carrito de compras</h1>
+      <div id="lista-carrito"><p>Tu carrito está vacío.</p></div>
+      <p>Total de artículos: <strong id="total">0</strong></p>
+      <p>Total estimado: <strong id="total-precio">$0 MXN</strong></p>
+      <p class="nota">Precios en pesos mexicanos (MXN), sujetos a cambio. No se realizan pagos reales.</p>
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </section>
+  </main>
+
+  <footer>CompuZone · Proyecto escolar</footer>
+  <script src="script.js"></script>
+</body>
+</html>

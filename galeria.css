@@ -1,0 +1,119 @@
+/* ==========================================================
+   GALERÍA TIPO AMAZON (pegar al final de tu CSS)
+   Miniaturas en columna a la izquierda + foto grande a la derecha
+   ========================================================== */
+
+/* En la tarjeta: si solo hay una foto, ocupa todo el ancho */
+.fotos img:only-of-type {
+  width: 100%;
+}
+
+.galeria {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Foto grande: tamaño fijo, la imagen se ajusta sin deformarse */
+.galeria .principal {
+  flex: 1;
+  min-width: 0;
+  height: 420px;
+  border-radius: 7px;
+  background: white;
+  object-fit: contain;
+}
+
+/* Columna de miniaturas (a la izquierda de la foto grande) */
+.miniaturas {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+/* Todas las miniaturas del mismo tamaño, sin importar la foto original */
+.miniatura {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  border: 2px solid #d4dce5;
+  border-radius: 8px;
+  background: white;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.miniatura:hover {
+  border-color: #7d9bb8;
+}
+
+.miniatura.activa {
+  border-color: #315477;
+}
+
+/* Móvil: foto arriba y miniaturas en fila debajo */
+@media (max-width: 600px) {
+  .galeria {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .galeria .principal {
+    width: 100%;
+    height: 280px;
+  }
+
+  .miniaturas {
+    order: 1;
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================
+   CARACTERÍSTICAS DEL DETALLE Y SECCIÓN DE LA TIENDA
+   ========================================================== */
+.caracteristicas {
+  padding-left: 20px;
+}
+
+.caracteristicas li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.sobre-tienda {
+  line-height: 1.6;
+}
+
+.ofertas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+}
+
+.oferta {
+  padding: 18px;
+  border: 1px solid #d4dce5;
+  border-radius: 8px;
+  background: white;
+}
+
+.oferta h3 {
+  margin-top: 0;
+  color: #315477;
+}
+
+.oferta p {
+  margin-bottom: 0;
+  line-height: 1.4;
+}

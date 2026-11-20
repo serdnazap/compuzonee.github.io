@@ -1,0 +1,43 @@
+CÓMO AGREGAR TUS FOTOS
+
+1. Coloca los archivos JPG en esta carpeta: imagenes
+2. Usa exactamente estos nombres (o cambia el src en index.html):
+
+MacBook Pro M4:
+  macbook-1.jpg
+  macbook-2.jpg
+
+ASUS Zenbook:
+  zenbook-1.jpg
+  zenbook-2.jpg
+
+Lenovo Legion 5:
+  legion-1.jpg
+  legion-2.jpg
+
+ASUS ROG Zephyrus G16:
+  zephyrus-1.jpg
+  zephyrus-2.jpg
+
+Free Wolf T96:
+  freewolf-1.jpg
+  freewolf-2.jpg
+
+Logitech G203 LIGHTSYNC:
+  logitech-1.jpg
+  logitech-2.jpg
+
+Razer Barracuda V2 Pro:
+  razer-1.jpg
+  razer-2.jpg
+
+Monitor Acer de 27 pulgadas:
+  acer-1.jpg
+  acer-2.jpg
+
+3. En index.html busca el comentario "PRODUCTO:" o "IMAGEN 1".
+4. Ejemplo: <img src="imagenes/macbook-1.jpg" ...>
+5. Si tienes PNG, cambia .jpg por .png en el HTML.
+   Para las fotos de la página Detalles cambia también la extensión en script.js.
+6. Abre index.html en Chrome o Safari.
+Los precios están pendientes, por lo que no hay pagos reales.
